@@ -17,7 +17,8 @@ class HangpersonGame
 
   def guess character
 
-	if @guesses.include? character 
+  
+	if @guesses.include? character or @wrong_guesses.include? character
 		return false
 	end
   
@@ -28,6 +29,8 @@ class HangpersonGame
 		@wrong_guesses = @wrong_guesses + character
 		return true
   end
+  
+  
    
   end
   # You can test it by running $ bundle exec irb -I. -r app.rb
