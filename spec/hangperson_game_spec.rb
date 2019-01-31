@@ -51,7 +51,7 @@ describe HangpersonGame do
         @game = HangpersonGame.new('garply')
         guess_several_letters(@game, 'aq')
       end
-      it 'does not change correct guess list', :pending => true do
+      it 'does not change correct guess list'do
         @game.guess('a')
         expect(@game.guesses).to eq('a')
       end
