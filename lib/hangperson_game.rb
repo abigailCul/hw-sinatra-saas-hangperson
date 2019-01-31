@@ -16,13 +16,18 @@ class HangpersonGame
   end
 
   def guess character
-    
-  	if @word.include? character
-  		@guesses = character
-  		return true
   
-    end
-    
+  
+		if @word.include? character
+  		@guesses = @guesses + character
+  		return true
+	else
+		@wrong_guesses = character
+		
+  end
+  
+  
+   
   end
   # You can test it by running $ bundle exec irb -I. -r app.rb
   # And then in the irb: irb(main):001:0> HangpersonGame.get_random_word
