@@ -35,7 +35,6 @@ class HangpersonGame
 		return true
   end
   
-   
   end
   
   def word_with_guesses
@@ -50,6 +49,13 @@ class HangpersonGame
     
     return result
   end
+  
+  def check_win_or_lose
+    if word_with_guesses.downcase == @word.downcase
+      return :win
+   
+    end
+end
   # You can test it by running $ bundle exec irb -I. -r app.rb
   # And then in the irb: irb(main):001:0> HangpersonGame.get_random_word
   #  => "cooking"   <-- some random word
