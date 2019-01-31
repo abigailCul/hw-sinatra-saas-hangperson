@@ -16,7 +16,9 @@ class HangpersonGame
   end
 
   def guess character
-
+ 
+  
+  character.downcase!
   
 	if @guesses.include? character or @wrong_guesses.include? character
 		return false
@@ -29,7 +31,6 @@ class HangpersonGame
 		@wrong_guesses = @wrong_guesses + character
 		return true
   end
-  
   
    
   end
