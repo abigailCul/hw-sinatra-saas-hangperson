@@ -16,7 +16,10 @@ class HangpersonGame
   end
 
   def guess character
- 
+    
+  if character.nil? or /[^A-Za-z]/.match(character) != nil or character == ''
+		raise ArgumentError.new("Not a valid letter")
+	end
   
   character.downcase!
   
