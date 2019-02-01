@@ -17,8 +17,15 @@
 </p>
 
 <form action="/guess" method="post">
-  <input type="text" size="1" name="guess" autocomplete="off"/>
-  <input type="submit" value="Guess!"/>
+  <div class="form-group row">
+    <label for="guess" class="col-md-2 col-form-label">Guess a letter:</label>
+    <input type="text" name="guess" autocomplete="off"
+           class="form-control col-md-1"/>
+    <input type="submit" value="Guess!" class="col-md-2 btn btn-success"/>
+  </div>
 </form>
 
 <%= erb :new %>
+
+
+
